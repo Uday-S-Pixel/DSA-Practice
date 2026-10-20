@@ -19,3 +19,19 @@ public:
         }
     }
 };
+
+//Optimal Solution
+class Solution {
+public:
+    void moveZeroes(vector<int>& nums) {
+        int NonZ = 0;
+        for(int  i = 0;i < nums.size();i ++){
+            if(nums[i] != 0){
+                // if we encounter a non zero integer swap its postion to initial
+                // positions
+                swap(nums[i],nums[NonZ]);
+                NonZ ++;
+            }
+        }
+    }
+};
